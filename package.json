@@ -13,6 +13,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "init:submodules": "git submodule update --init --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
