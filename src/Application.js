@@ -1,4 +1,5 @@
 import './Application.css';
+import { TonConnectUIProvider } from '@ion-gateway/ui-react';
 
 function Application() {
   return (

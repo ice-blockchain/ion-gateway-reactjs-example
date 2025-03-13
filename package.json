@@ -19,8 +19,9 @@
     "@ion-gateway/ui-react": "file:./submodules/ion-gateway/packages/ui-react"
   },
   "scripts": {
-    "init:submodules": "git submodule update --init --recursive",
-    "build:submodules": "cd node_modules/@ion-gateway/protocol; npm install; yarn build;",
+    "submodules:init": "git submodule update --init --recursive",
+    "submodules:update": "git submodule update --remote --merge",
+    "submodules:build": "cd node_modules/@ion-gateway/protocol; npm install; yarn build; cd ../../../; cd node_modules/@ion-gateway/isomorphic-eventsource; npm install; cd ../../../; cd node_modules/@ion-gateway/isomorphic-fetch; npm install; cd ../../../; cd node_modules/@ion-gateway/sdk; npm install; yarn build; cd ../../../; cd node_modules/@ion-gateway/ui; npm install; yarn build; cd ../../../; cd node_modules/@ion-gateway/ui-react; npm install; yarn build;",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
