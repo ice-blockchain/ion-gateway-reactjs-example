@@ -10,10 +10,17 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "@ion-gateway/isomorphic-eventsource": "file:./submodules/ion-gateway/packages/isomorphic-eventsource",
+    "@ion-gateway/isomorphic-fetch": "file:./submodules/ion-gateway/packages/isomorphic-fetch",
+    "@ion-gateway/protocol": "file:./submodules/ion-gateway/packages/protocol",
+    "@ion-gateway/sdk": "file:./submodules/ion-gateway/packages/sdk",
+    "@ion-gateway/ui": "file:./submodules/ion-gateway/packages/ui",
+    "@ion-gateway/ui-react": "file:./submodules/ion-gateway/packages/ui-react"
   },
   "scripts": {
     "init:submodules": "git submodule update --init --recursive",
+    "build:submodules": "cd node_modules/@ion-gateway/protocol; npm install; yarn build;",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
