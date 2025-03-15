@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ion-gateway/protocol": "^2.2.7",
+    "@ion-gateway/sdk": "^3.0.7",
+    "@ion-gateway/ui": "^2.0.12",
+    "@ion-gateway/ui-react": "^2.0.13-beta.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
@@ -10,18 +14,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.0",
-    "@ion-gateway/isomorphic-eventsource": "file:./submodules/ion-gateway/packages/isomorphic-eventsource",
-    "@ion-gateway/isomorphic-fetch": "file:./submodules/ion-gateway/packages/isomorphic-fetch",
-    "@ion-gateway/protocol": "file:./submodules/ion-gateway/packages/protocol",
-    "@ion-gateway/sdk": "file:./submodules/ion-gateway/packages/sdk",
-    "@ion-gateway/ui": "file:./submodules/ion-gateway/packages/ui",
-    "@ion-gateway/ui-react": "file:./submodules/ion-gateway/packages/ui-react"
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "submodules:init": "git submodule update --init --recursive",
-    "submodules:update": "git submodule update --remote --merge",
-    "submodules:build": "cd node_modules/@ion-gateway/protocol; npm install; yarn build; cd ../../../; cd node_modules/@ion-gateway/isomorphic-eventsource; npm install; cd ../../../; cd node_modules/@ion-gateway/isomorphic-fetch; npm install; cd ../../../; cd node_modules/@ion-gateway/sdk; npm install; yarn build; cd ../../../; cd node_modules/@ion-gateway/ui; npm install; yarn build; cd ../../../; cd node_modules/@ion-gateway/ui-react; npm install; yarn build;",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
