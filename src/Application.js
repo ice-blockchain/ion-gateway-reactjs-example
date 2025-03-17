@@ -7,11 +7,11 @@ export const Wallet = ({onDisconnect, onTransact}) => {
     return (
         wallet && (
             <div>
+                <button onClick={onDisconnect}>Disconnect</button>
                 <p><b>Connected wallet address</b>: {wallet.account.address}</p>
                 <p><b>Device</b>: {wallet.device.appName}</p>
                 <p><b>Connected via</b>: {wallet.provider}</p>
-                <button onClick={onDisconnect}>Disconnect</button>
-                <button onClick={onTransact}>Transact</button>
+                <button onClick={onTransact}>Send ION to another wallet</button>
             </div>
         )
     );
@@ -40,10 +40,11 @@ function Application() {
     };
 
     return (
-        <header>
+        <div className="form">
+            <h1>ION Gateway React.js Example</h1>
             {!wallet && (
                 <button onClick={() => tonConnectUI.openModal()}>
-                    Connect Wallet
+                    Connect the ION Wallet
                 </button>
             )}
             {wallet && (
@@ -52,7 +53,7 @@ function Application() {
                     onTransact={handleTransact}
                 />
             )}
-        </header>
+        </div>
     );
 }
 
