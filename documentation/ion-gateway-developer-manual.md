@@ -14,6 +14,8 @@ The `build.sh` script prepares a multi-package JavaScript/TypeScript project for
 
 ## Installing the `ION Gateway React.js Example`
 
+> Please, get sure to have the latest `Node.js` and `Yarn` installed.
+
 ```shell
 git clone https://github.com/ice-blockchain/ion-gateway-reactjs-example.git
 cd ion-gateway-reactjs-example
@@ -21,6 +23,9 @@ cd ion-gateway-reactjs-example
 ```
 
 ## OR - Installing both
+
+> Please, get sure to have the latest `Node.js` and `Yarn` installed.
+
 ```shell
 git clone https://github.com/ice-blockchain/ion-gateway.git
 cd ion-gateway
