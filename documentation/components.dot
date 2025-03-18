@@ -1,0 +1,48 @@
+digraph IonGatewayProject {
+  rankdir=LR;
+  graph [fontname="Helvetica", fontsize=12];
+  node [fontname="Helvetica", fontsize=12, shape=rect, style=rounded];
+
+  subgraph cluster_application {
+    label="ion-gateway-reactjs-example";
+    style=dashed;
+
+    Application_js [label="./src/Application.js", shape=box, style=filled, color=lightblue];
+    Index_js [label="./src/index.js", shape=box, style=filled, color=lightblue];
+
+    Application_js -> Index_js [style=dotted, label="rendered by"];
+
+    TonConnectUIProvider [label="TonConnectUIProvider", style=filled, color=lightgray];
+    useTonConnectUI [label="useTonConnectUI()", style=filled, color=lightgray];
+    useTonWallet [label="useTonWallet()", style=filled, color=lightgray];
+
+    Index_js -> TonConnectUIProvider [label="provides context"];
+    Application_js -> useTonConnectUI [label="uses"];
+    Application_js -> useTonWallet [label="uses"];
+  }
+
+  subgraph cluster_ion_gateway {
+    label="ION Gateway Library";
+    style=solid;
+    fontsize=12;
+    color=gray;
+
+    IonGateway_UIReact [label="@ion-gateway/ui-react", shape=box, style=filled, color=lightyellow];
+    IonGateway_UI [label="@ion-gateway/ui", shape=box, style=filled, color=lightyellow];
+    IonGateway_SDK [label="@ion-gateway/sdk", shape=box, style=filled, color=lightyellow];
+    IonGateway_Protocol [label="@ion-gateway/protocol", shape=box, style=filled, color=lightyellow];
+    IonGateway_EventSource [label="@ion-gateway/isomorphic-eventsource", shape=box, style=filled, color=lightyellow];
+    IonGateway_Fetch [label="@ion-gateway/isomorphic-fetch", shape=box, style=filled, color=lightyellow];
+
+    IonGateway_UIReact -> IonGateway_UI [label="depends on"];
+    IonGateway_UI -> IonGateway_SDK [label="depends on"];
+    IonGateway_SDK -> IonGateway_Protocol [label="depends on"];
+    IonGateway_SDK -> IonGateway_EventSource [label="depends on"];
+    IonGateway_SDK -> IonGateway_Fetch [label="depends on"];
+  }
+
+  // Connect the application to the library
+  TonConnectUIProvider -> IonGateway_UIReact;
+  useTonConnectUI -> IonGateway_UIReact;
+  useTonWallet -> IonGateway_UIReact;
+}

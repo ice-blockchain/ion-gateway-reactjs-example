@@ -1,6 +1,14 @@
 # ION Gateway Developer Manual - React.js Example 
 > The `ION Gateway React.js Example` demonstrates, how to use the `ION Gateway` for connecting custom Web3 applications to the `ION Blockchain` using one of the `ION Wallets` supporting the `ION Gateway` protocol.
 
+![ION Gateway React.js Example - Components Diagram](./components.png)
+[original *.dot](./components.dot)
+
+- The `ion-gateway-reactjs-example` uses React Provider (`TonConnectUIProvider`) from `@ion-gateway/ui-react` to establish context.
+- Hooks (`useTonConnectUI` and `useTonWallet`) from `@ion-gateway/ui-react` provide functionalities to React components in this project.
+- Underlying libraries (`@ion-gateway/ui`, `@ion-gateway/sdk`, `@ion-gateway/protocol`) provide lower-level functionality, API interactions, context management, protocol definitions, and network layer (`isomorphic-fetch`, `isomorphic-eventsource`).
+- Local linking (`yarn link`) is used during development, as indicated by the provided scripts.
+
 ## Installing the `ION Gateway`
 
 > Please, get sure to have the latest `Node.js` and `Yarn` installed.
