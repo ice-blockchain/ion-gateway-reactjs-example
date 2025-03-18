@@ -53,6 +53,9 @@ cd ion-gateway-reactjs-example
 cd ..
 ```
 
+## ION Gateway React.js Example Playground
+- http://217.79.254.147:3013/
+
 ## Screenshots
 
 ### Connecting the wallet to a Web3 App
@@ -65,3 +68,9 @@ cd ..
 
 ### Sending ION to another wallet
 ![./ion-gateway-reactjs-example.4.png](./ion-gateway-reactjs-example.4.png)
+
+## Running the example using PM2
+```shell
+pm2 start "PORT=3013 HOST=0.0.0.0 npm run start" --name "gateway-example"
+```
+
