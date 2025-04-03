@@ -7,7 +7,11 @@ import {TonConnectUIProvider} from '@ion-gateway/ui-react';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <TonConnectUIProvider manifestUrl="./iongateway-manifest.json">
+        <TonConnectUIProvider manifestUrl="./iongateway-manifest.json" actionsConfiguration={{
+            returnStrategy: 'back',
+            modals: ['before', 'success', 'error'],
+            notifications: ['before', 'success', 'error'],
+        }}>
             <Application/>
         </TonConnectUIProvider>
     </React.StrictMode>
