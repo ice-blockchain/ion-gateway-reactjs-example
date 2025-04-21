@@ -11,7 +11,7 @@ root.render(
             returnStrategy: 'back',
             modals: ['before', 'success', 'error'],
             notifications: ['before', 'success', 'error'],
-        }}>
+        }} buttonRootId='ionConnectButton'>
             <Application/>
         </TonConnectUIProvider>
     </React.StrictMode>
