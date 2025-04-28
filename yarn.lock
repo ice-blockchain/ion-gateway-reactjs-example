@@ -1287,14 +1287,26 @@
     "@ion-gateway/isomorphic-fetch" "^0.0.3"
     "@ion-gateway/protocol" "^2.2.7"
 
-"@ion-gateway/ui-react@^2.1.1-beta.0":
-  version "2.1.1-beta.4"
-  resolved "file:../ion-gateway/packages/ui-react"
+"@ion-gateway/ui-react@^2.1.1-beta.7":
+  version "2.1.1-beta.7"
+  resolved "https://registry.npmjs.org/@ion-gateway/ui-react/-/ui-react-2.1.1-beta.7.tgz"
+  integrity sha512-pngLq3nxE0Psmfflw2V4m41C1saQwCg3OKoIw1zsFq+QXJEZBIE2IUTPNW5mtscUpGi829rZeEs6fiVr+Jmd5Q==
   dependencies:
     "@ion-gateway/ui" "2.1.1-beta.0"
 
-"@ion-gateway/ui@^2.1.1-beta.0", "@ion-gateway/ui@2.1.1-beta.0":
-  version "2.1.1-beta.4"
+"@ion-gateway/ui@^2.1.1-beta.7":
+  version "2.1.1-beta.7"
+  resolved "https://registry.npmjs.org/@ion-gateway/ui/-/ui-2.1.1-beta.7.tgz"
+  integrity sha512-uBTtPdPqr/iXiiWGArn31J33rORq7NDw9Fq6gm0SLzuAUSN+GmmhQA5JOENKt6V1ud9HI4TP5kcpGJJ7DR0+Tw==
+  dependencies:
+    "@ion-gateway/sdk" "3.1.1-beta.0"
+    classnames "^2.3.2"
+    csstype "^3.1.1"
+    deepmerge "^4.2.2"
+    ua-parser-js "^1.0.35"
+
+"@ion-gateway/ui@2.1.1-beta.0":
+  version "2.1.1-beta.7"
   resolved "file:../ion-gateway/packages/ui"
   dependencies:
     "@ion-gateway/sdk" "3.1.1-beta.0"
